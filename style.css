@@ -1,0 +1,172 @@
+:root {
+  /* Primary */
+  --clr-primary-500: hsl(213, 96%, 18%);
+  --clr-primary-400: hsl(243, 100%, 62%);
+  --clr-primary-300: hsl(228, 100%, 84%);
+  --clr-primary-200: hsl(206, 94%, 87%);
+  --clr-primary-100: hsl(354, 84%, 57%);
+
+  /* neutral */
+  --clr-neutral-500: hsl(231, 11%, 63%);
+  --clr-neutral-400: hsl(229, 24%, 87%);
+  --clr-neutral-300: hsl(217, 100%, 97%);
+  --clr-neutral-200: hsl(231, 100%, 99%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  /* fonts*/
+  --ff-main: ubuntu;
+  --fw-bold: 700;
+  --fw-medium: 500;
+  --fw-light: 400;
+  --fs-paragraph: 16px;
+}
+
+main {
+  position: relative;
+  background: url(./assets/images/bg-sidebar-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--clr-neutral-300);
+  min-height: 100vh;
+}
+
+.navigation {
+  width: 100%;
+}
+
+.navigation ul {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.navigation li {
+  list-style: none;
+}
+
+.navigation .number {
+  border-radius: 20px;
+  border: 1px solid var(--clr-neutral-200);
+  color: var(--clr-neutral-300);
+  height: 25px;
+  list-style: none;
+  overflow: hidden;
+  text-align: center;
+  width: 25px;
+}
+
+.nav--title {
+  display: none;
+}
+
+/* Form section */
+.card {
+  display: none;
+  height: 100%;
+  background-color: transparent;
+}
+
+.card--form {
+  background-color: var(--clr-neutral-100);
+  border-radius: 8px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  width: 90%;
+}
+
+.input--group {
+  display: grid;
+}
+
+.card.active {
+  display: block;
+}
+
+.number.highlight {
+  color: var(--clr-primary-500);
+  background-color: var(--clr-primary-200);
+}
+
+.card--buttons {
+  position: absolute;
+  background-color: red;
+  width: 100%;
+  padding: 1rem;
+  bottom: 0;
+}
+
+.btn--next {
+  float: right;
+}
+
+.btn--confirm {
+  float: right;
+}
+
+.btn--previous {
+  float: left;
+}
+
+/* Step 2 */
+
+.chkbox--style {
+  display: block;
+  width: 100%;
+  background-color: aqua;
+}
+
+.option input:checked {
+  border: 100px solid yellow;
+}
+
+@media (min-width: 400px) {
+  main {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    padding: 1rem;
+    background: none;
+  }
+
+  .navigation {
+    background: url(./assets/images/bg-sidebar-desktop.svg);
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .form {
+    position: static;
+    background-color: var(--clr-neutral-100);
+    height: 100%;
+  }
+
+  .navigation ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 15px;
+  }
+  .navigation li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .navigation li p {
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .nav--title {
+    display: block;
+  }
+}

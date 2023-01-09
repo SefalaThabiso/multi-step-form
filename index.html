@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi step form</title>
+
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="shortcut icon" href="#" />
+
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <nav class="navigation">
+        <ul>
+          <li>
+            <div class="number" data-step-indicate>1</div>
+            <div class="nav--title">
+              <p>step 1</p>
+              <p>your info</p>
+            </div>
+          </li>
+          <li>
+            <div class="number" data-step-indicate>2</div>
+            <div class="nav--title">
+              <p>step 2</p>
+              <p>select plan</p>
+            </div>
+          </li>
+          <li>
+            <div class="number" data-step-indicate>3</div>
+            <div class="nav--title">
+              <p>step 3</p>
+              <p>add-ons</p>
+            </div>
+          </li>
+          <li>
+            <div class="number" data-step-indicate>4</div>
+            <div class="nav--title">
+              <p>step 4</p>
+              <p>summary</p>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <form data-multi-step>
+        <!-- STep number one start here-->
+        <div class="card" data-step>
+          <div class="card--form">
+            <h2>Personal info</h2>
+            <p>Please provide your name, email address, and phone number.</p>
+            <div class="input--group">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div class="input--group">
+              <label for="email">Email Address</label>
+              <input type="email" required name="email" id="email" />
+            </div>
+            <div class="input--group">
+              <label for="phone">Phone Number</label>
+              <input type="text" required name="phone" id="phone" />
+            </div>
+          </div>
+          <div class="card--buttons">
+            <button class="btn btn--next" type="button" data-next>
+              Next Step
+            </button>
+          </div>
+        </div>
+
+        <!-- STep number two start here-->
+        <div class="card" data-step>
+          <div class="card--form">
+            <h2>Select your plan</h2>
+            <p>You have the option of monthly or yearly billing.</p>
+
+            <div class="option">
+              <label for="first" class="chkbox--style">Acarde</label>
+              <input type="checkbox" name="" id="first" />
+            </div>
+          </div>
+          <div class="card--buttons">
+            <button class="btn btn--previous" type="button" data-previous>
+              Go Back
+            </button>
+            <button class="btn btn--next" type="button" data-next>
+              Next Step
+            </button>
+          </div>
+        </div>
+        <div class="card" data-step>
+          <div class="card--form"></div>
+          <div class="card--buttons">
+            <button class="btn btn--previous" type="button" data-previous>
+              Go Back
+            </button>
+            <button class="btn btn--next" type="button" data-next>
+              Next Step
+            </button>
+          </div>
+        </div>
+        <div class="card" data-step>
+          <div class="card--form"></div>
+          <div class="card--buttons">
+            <button class="btn btn--previous" type="button" data-previous>
+              Go Back
+            </button>
+            <button class="btn btn--confirm" type="submit">Confirm</button>
+          </div>
+        </div>
+        <div class="card" data-step>
+          <div class="card--form">
+            Cupidatat esse consectetur excepteur excepteur qui sit do
+            consectetur proident amet consectetur officia. Pariatur laborum et
+            sunt consequat. Occaecat occaecat id velit deserunt velit esse elit
+            esse reprehenderit incididunt reprehenderit dolor dolore proident.
+            In eiusmod ad excepteur adipisicing Lorem est.
+          </div>
+          <div class="card--buttons"></div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
